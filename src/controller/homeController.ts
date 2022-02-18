@@ -1,18 +1,8 @@
-import express from 'express'
-export const homeController = express.Router();
-import { homeModel } from '../model/homeModel'
-
-
-
+import { Router } from 'express'
+const homeController = Router();
 
 homeController.get("/", (req, res) => {
-    res.render('home', homeModel())
+    res.render('home')
 })
 
-homeController.get("/login", (req, res) => {
-    res.render('login', homeModel())
-})
-
-homeController.post("/login", (req, res) => {
-    res.render('login')
-})
+export { homeController }

@@ -1,0 +1,33 @@
+<%- include('./template/header')%>
+    <div class="h-100 d-flex justify-content-center align-items-center">
+        <form action="/singup" method="post">
+            <center>
+                <h2>ADMİN LOGİN</h2>
+            </center>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input name="email" type="email" class="form-control" id="inputemail" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input name="password" type="password" class="form-control" id="inputpassword">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="inputcheck">
+                <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+            </div>
+            <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script>
+        const button = document.querySelector('#submitButton')
+
+        button.addEventListener('click', () => {
+            const email = document.querySelector('#inputemail')
+            const password = document.querySelector('#inputpassword')
+            const rememberme = document.querySelector('#inputcheck')
+        })
+
+    </script>
+    <%- include('./template/js')-%>
