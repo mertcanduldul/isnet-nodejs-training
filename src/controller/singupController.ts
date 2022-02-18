@@ -3,7 +3,6 @@ import { urlencoded } from 'body-parser'
 import { IUser } from '../model/user/IUser';
 import { userSave } from '../model/user/userModel';
 const singupController = Router();
-
 const urlencoderParser = urlencoded({ extended: false })
 
 singupController.get("/singup", (req, res) => {

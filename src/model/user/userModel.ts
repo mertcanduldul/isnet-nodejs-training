@@ -16,4 +16,4 @@ const userSave = (objUser) => (
         .catch(err => console.log(err))
 )
 
-export { userSave }
+export { userSave, userSchema, UserModel }
