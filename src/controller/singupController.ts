@@ -16,7 +16,7 @@ singupController.post("/singup", urlencoderParser, (req, res) => {
         USER_PASS: req.body.password,
         USER_LAST_LOGIN: "2022-02-18"
     }
-    userSave(objUser)
+    userSave({ objUser })
     res.redirect('/')
 })
 

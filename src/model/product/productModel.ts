@@ -10,8 +10,8 @@ const productSchema = new Schema<IProduct>({
 const ProductModel = model("PR_PRODUCT", productSchema);
 
 const productSave = ({ objProduct }) => {
-    ProductModel.create({ objProduct })
+    ProductModel.create(objProduct)
         .then((res) => console.log(res))
         .catch(err => console.log(err))
 }
-export { productSave }
+export { productSave, ProductModel, productSchema }
